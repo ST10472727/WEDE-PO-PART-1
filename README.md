@@ -1,6 +1,6 @@
 # WEDE-PO-PART-1
 ## Student Information
-Sibusiso Mokoena
+Sibusiso Mokoena<br>
 WEDE5020
 T Mashile
 Project Overview 
