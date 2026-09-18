@@ -111,6 +111,8 @@ Supports Objective 2 (Reduce Cart Abandonment): The "Have a Question?" button on
 
 Wholesale Lead Generation: The B2B routing captures potential café/restaurant partnerships, expanding revenue streams beyond direct-to-consumer.
 
+Part 2
+
 Removed Invalid Header Nesting (index.html, about.html, Catalogue.html, Contact.html, Gallery.html):Part 1 Code: <header><h1><nav><a href="...">...</a></nav></h1></header>  Update: Placed <nav> outside of the <h1> heading element. Wrapping navigation links inside a primary heading tag is invalid HTML syntax and breaks accessibility tree structures.Fixed Broken Image File Paths (index.html, about.html, Catalogue.html, Gallery.html):Part 1 Code: <img src="c:\Users\Student\Documents\image\Seattle6.jpg"> and <img src="c:\Users\Student\Pictures\1772625308377.jpg">  Update: Replaced absolute local C-drive computer file paths with clean relative project paths (e.g., src="images/Seattle6.jpg"). Local C-drive paths break as soon as the project is pushed to GitHub or viewed on another machine.
 
 Corrected HTML Syntax Errors (Gallery.html, index.html):Part 1 Code: Typo <image src="..."> in index.html, unclosed bold tag <b> BUY NOW in index.html, stray character < under header in Gallery.html, and missing closing HTML tags.  Update: Changed <image> tags to valid HTML <img> tags, properly closed all formatting tags (<b> -> <strong>), and removed stray syntax characters.
