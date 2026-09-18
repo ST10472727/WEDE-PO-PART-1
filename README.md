@@ -2,7 +2,7 @@
 ## Student Information
 Sibusiso Mokoena<br>
 WEDE5020
-T Mashile
+
 Project Overview 
 The Seattle Coffee Company website is a premium, immersive digital storefront and brand hub. It is designed to do more than just sell coffee; it tells the story of the Pacific Northwest’s coffee culture. The website acts as a bridge between the rainy, artistic streets of Seattle and the customer's kitchen, offering a curated selection of small-batch roasts, brewing gear, and subscription services.
 
@@ -111,12 +111,67 @@ Supports Objective 2 (Reduce Cart Abandonment): The "Have a Question?" button on
 
 Wholesale Lead Generation: The B2B routing captures potential café/restaurant partnerships, expanding revenue streams beyond direct-to-consumer.
 
+
+
+
 Part 2
 
-Removed Invalid Header Nesting (index.html, about.html, Catalogue.html, Contact.html, Gallery.html):Part 1 Code: <header><h1><nav><a href="...">...</a></nav></h1></header>  Update: Placed <nav> outside of the <h1> heading element. Wrapping navigation links inside a primary heading tag is invalid HTML syntax and breaks accessibility tree structures.Fixed Broken Image File Paths (index.html, about.html, Catalogue.html, Gallery.html):Part 1 Code: <img src="c:\Users\Student\Documents\image\Seattle6.jpg"> and <img src="c:\Users\Student\Pictures\1772625308377.jpg">  Update: Replaced absolute local C-drive computer file paths with clean relative project paths (e.g., src="images/Seattle6.jpg"). Local C-drive paths break as soon as the project is pushed to GitHub or viewed on another machine.
+ Detailed Comments and Updated Changes
 
-Corrected HTML Syntax Errors (Gallery.html, index.html):Part 1 Code: Typo <image src="..."> in index.html, unclosed bold tag <b> BUY NOW in index.html, stray character < under header in Gallery.html, and missing closing HTML tags.  Update: Changed <image> tags to valid HTML <img> tags, properly closed all formatting tags (<b> -> <strong>), and removed stray syntax characters.
+Fixed the navigation structure in all HTML pages
 
+The original code placed the navigation links inside the `<h1>` heading, for example:
 
-Added CSS External Link Tag (All Pages):Part 1 Code: No external CSS links present.  Update: Linked <link rel="stylesheet" href="style.css"> inside the <head> of all pages to attach the centralized stylesheet.Implemented Code Comments for Criterion Requirements (HTML & CSS):Part 1 Feedback: Lecturers flagged "No comments added to code" (0/5 marks).Update: Inserted structured section comments throughout style.css (Table of Contents, CSS Reset, Typography, Flexbox Navigation, Form Focus States, CSS Grid, and Media Queries) and HTML files to explain element structural roles.Restructured Page Content Depth (Catalogue.html & Gallery.html):Part 1 Feedback: Lecturers flagged "Content is sufficient but could be improved. The pages have relevant content, but it may lack depth or detail."Update: Grouped gallery images into a responsive CSS Grid container (<div class="gallery-grid">), wrapped forms inside defined block structures, and ensured proper semantic page landmarks (<main>, <section>).
+`<header><h1><nav><a href="...">...</a></nav></h1></header>`
+
+This was changed by moving the `<nav>` element outside of the `<h1>` tag. This makes the HTML structure more correct and also improves accessibility, as headings and navigation are now used for their intended purposes.
+
+Fixed image file paths
+
+Some of the pages were using full file paths from the computer, such as:
+
+`<img src="c:\Users\Student\Documents\image\Seattle6.jpg">`
+
+These paths only work on the specific computer where the images are stored. They were replaced with relative paths, such as:
+
+`src="images/Seattle6.jpg"`
+
+This allows the images to work correctly when the website is moved to another computer or uploaded to GitHub.
+
+**Corrected HTML errors**
+
+Several small HTML mistakes were found in the `Gallery.html` and `index.html` pages. These included using `<image>` instead of the correct `<img>` element, leaving a `<b>` tag open, having an unnecessary `<` character in the Gallery page, and missing some closing HTML tags.
+
+These errors were corrected by using the proper `<img>` element, replacing `<b>` with `<strong>` where appropriate, removing the extra character, and making sure all required HTML tags were properly closed.
+
+Added page information and mobile support
+
+The pages were missing important metadata in the `<head>` section. A UTF-8 character set and viewport setting were added to all pages.
+
+The following viewport code was included:
+
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
+This helps the website display properly on different screen sizes, including mobile phones and tablets.
+
+Connected the CSS stylesheet
+
+The HTML pages did not previously have a link to the external CSS file. The following line was added to each page:
+
+`<link rel="stylesheet" href="style.css">`
+
+This connects all the pages to the same stylesheet, making it easier to keep the design and formatting consistent throughout the website.
+
+Added comments to the code
+
+Feedback from the lecturer indicated that comments were missing from the code, which resulted in no marks being awarded for this requirement.
+
+To address this, comments were added throughout the HTML and CSS files. The comments explain the different sections of the code, including the navigation, typography, form styling, CSS Grid, Flexbox and responsive media queries. This makes the code easier to understand and maintain.
+
+Improved the content structure of the Catalogue and Gallery pages
+
+The Catalogue and Gallery pages were improved because the original content was considered relevant but did not provide enough detail.
+
+The gallery images were placed inside a responsive `<div class="gallery
+
 
