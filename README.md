@@ -175,3 +175,17 @@ The Catalogue and Gallery pages were improved because the original content was c
 The gallery images were placed inside a responsive `<div class="gallery
 
 
+Reference List
+
+Seattle Coffee Company (2026) Seattle Coffee Company – Official Website. Available at: https://www.seattlecoffeecompany.co.za/ (Accessed: 18 September 2026).
+Seattle Coffee Company (2026) Seattle Coffee Co. Instagram. Available at: Seattle Coffee Company Instagram (Accessed: 18 September 2026).
+Seattle Coffee Company (2025) Seattle Coffee Company social media photographs and promotional images. Available at: Seattle Coffee Company official website (Accessed: 18 September 2026). The official website currently displays Instagram posts featuring coffee, stores and promotional content.
+Seattle Coffee Company (2025) Seattle Coffee Co. Facebook photographs. Available at: Seattle Coffee Company Facebook (Accessed: 18 September 2026).
+Briefly News (2025) Seattle Coffee menu and updated prices in South Africa. Available at: Briefly News – Seattle Coffee menu (Accessed: 18 September 2026). This page contains Seattle Coffee menu and product images and attributes some photographs to Seattle Coffee Co.'s Facebook page.
+Seattle Coffee Company (2024) Seattle Coffee Company – Coffee, food and store information. Available at: Seattle Coffee Company official website (Accessed: 18 September 2026).
+Head Topics (2024) Seattle Coffee menu and updated prices in South Africa. Available at: Head Topics – Seattle Coffee menu (Accessed: 18 September 2026). The article includes Seattle Coffee product/menu images sourced from social media.
+WorldPlaces (2025) Seattle Coffee Company – South Africa. Available at: WorldPlaces – Seattle Coffee Company (Accessed: 18 September 2026). The listing provides links to Seattle Coffee's website and social-media photographs.
+
+
+
+
