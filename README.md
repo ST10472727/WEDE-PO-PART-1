@@ -204,3 +204,4 @@ Introduced a dedicated script.js file, adding programmable interactivity (such a
  Moved style.css from a nested CSS/ folder to the main project directory for easier linking.
 Implemented a base CSS reset to remove default browser margins and paddings.
 Restructured the loyalty points section for clearer user engagement.
+ Structured the product catalogue into a responsive grid container.
