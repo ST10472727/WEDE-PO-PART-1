@@ -200,3 +200,4 @@ Refined breakpoints and layout adjustments to ensure elements, navigation, and i
 asset filenames like Catalogue.html were normalized to lowercase (catalogue.html), which prevents broken links caused by case-sensitive server environments.
 HTML files (about.html, catalogue.html, contact.html, gallery.html, loyalty.html) have cleaner directory paths pointing directly to the updated stylesheet and script files.
 Added core rule sets for color palettes, backgrounds, and typography that were completely missing in the previous submission.
+Introduced a dedicated script.js file, adding programmable interactivity (such as handling form inputs, dropdowns, or dynamic cart/loyalty features)
