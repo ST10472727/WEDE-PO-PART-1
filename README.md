@@ -201,13 +201,14 @@ asset filenames like Catalogue.html were normalized to lowercase (catalogue.html
 HTML files (about.html, catalogue.html, contact.html, gallery.html, loyalty.html) have cleaner directory paths pointing directly to the updated stylesheet and script files.
 Added core rule sets for color palettes, backgrounds, and typography that were completely missing in the previous submission.
 Introduced a dedicated script.js file, adding programmable interactivity (such as handling form inputs, dropdowns, or dynamic cart/loyalty features)
- Moved style.css from a nested CSS/ folder to the main project directory for easier linking.
+Moved style.css from a nested CSS/ folder to the main project directory for easier linking.
 Implemented a base CSS reset to remove default browser margins and paddings.
 Restructured the loyalty points section for clearer user engagement.
- Structured the product catalogue into a responsive grid container.
- Added required input validation attributes (required, type="email") to contact forms.
+Structured the product catalogue into a responsive grid container.
+Added required input validation attributes (required, type="email") to contact forms.
 Grouped company history and mission statements into clean article blocks.
 Expanded button padding and clickable areas for touch devices.
 Implemented primary media queries targeting max-width screens (e.g., $768\text{px}$ and $480\text{px}$).
 Added default styling for buttons, including background fills and borders.
 Introduced consistent hex codes and color variables for background and text contrast.
+Created structured, bottom-pinned footer styling across all pages.
