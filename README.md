@@ -187,5 +187,5 @@ Head Topics (2024) Seattle Coffee menu and updated prices in South Africa. Avail
 WorldPlaces (2025) Seattle Coffee Company – South Africa. Available at: WorldPlaces – Seattle Coffee Company (Accessed: 18 September 2026). The listing provides links to Seattle Coffee's website and social-media photographs.
 
 
-
+Consolidation of Directories: Removed redundant nested asset subfolders in favor of a clean, flat root structure 
 
