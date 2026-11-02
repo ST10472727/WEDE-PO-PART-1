@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Login or sign up to the Seattle Coffee Company loyalty programme – your 11th drink is on us.">
+<title>Seattle Coffee Company | Loyalty</title>
+<link rel="icon" href="images/sm-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo"><img src="images/sm-logo.png" alt="Seattle Coffee Company logo">Seattle Coffee Co</a>
+    <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="catalogue.html">Catalogue</a></li>
+      <li><a href="loyalty.html">Loyalty</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+<!-- Login / Sign up -->
+<section id="authSection" class="auth">
+  <img class="auth-img" src="images/coffee-hero.jpg" alt="Seattle Coffee Company mug">
+  <div>
+    <h1>Seattle Coffee Co</h1>
+    <h2>Login or Sign Up to Loyalty</h2>
+    <div class="tabs-auth"><button class="active" data-mode="login">Login</button><button data-mode="signup">Sign Up</button></div>
+    <div id="authMsg" class="message"></div>
+    <form id="authForm" novalidate>
+      <div class="form-group signup-only" style="display:none"><label for="firstName">First Name</label><input id="firstName" name="firstName" placeholder="First Name"></div>
+      <div class="form-group signup-only" style="display:none"><label for="lastName">Last Name</label><input id="lastName" name="lastName" placeholder="Last Name"></div>
+      <div class="form-group signup-only" style="display:none"><label for="semail">Email</label><input id="semail" name="email" type="email" placeholder="Email"></div>
+      <div class="form-group"><label for="mobile">Mobile Number (+27)</label><input id="mobile" name="mobile" type="tel" placeholder="082 123 4567"></div>
+      <div class="form-group"><label for="password">Password</label><input id="password" name="password" type="password" placeholder="At least 6 characters"></div>
+      <button id="authBtn" class="btn navy block" type="submit">Login</button>
+    </form>
+  </div>
+</section>
+
+<!-- Dashboard after login -->
+<section id="dashboard" style="display:none">
+  <nav class="loyalty-nav"><ul>
+    <li><button data-panel="home" class="active">Home</button></li>
+    <li><button data-panel="vouchers">Vouchers</button></li>
+    <li><button data-panel="history">Loyalty History</button></li>
+    <li><button data-panel="profile">Profile</button></li>
+    <li><button id="signOut">Sign out</button></li>
+  </ul></nav>
+
+  <div class="panel active" id="panel-home">
+    <div class="loyal-banner"><div class="text"><span class="are">ARE</span><span class="you">YOU</span><span class="loyal">LOYAL??</span><small>YOUR <b>11TH DRINK</b> IS ON US!</small></div></div>
+    <div class="subtabs">
+      <button class="active" data-sub="rewards"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4"/><path d="M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg> Rewards</button>
+      <button data-sub="security"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> Security</button>
+    </div>
+    <div id="rewardsView">
+      <p class="empty" id="welcome"></p>
+      <div class="stats">
+        <div class="stat"><svg viewBox="0 0 24 28"><path d="M12 27s-9-9.5-9-16a9 9 0 0 1 18 0c0 6.5-9 16-9 16z"/><circle cx="12" cy="11" r="3.5"/></svg><h4>Total Site Visits</h4><div class="num" id="statVisits">0</div></div>
+        <div class="stat"><svg viewBox="0 0 24 24"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21l1.4-7L2 9.3l7-.8z"/></svg><h4>Beverages Points Balance</h4><div class="num" id="statPoints">0</div></div>
+        <div class="stat"><svg viewBox="0 0 26 24"><path d="M3 5h15v8a7 7 0 0 1-7 7h-1a7 7 0 0 1-7-7z"/><path d="M18 8h2a3 3 0 0 1 0 6h-2.5M3 12h15"/></svg><h4>Free Beverages Redeemed</h4><div class="num" id="statRedeemed">0</div></div>
+        <div class="stat"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4"/><path d="M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg><h4>Free Beverages Available</h4><div class="num" id="statAvailable">0</div></div>
+      </div>
+      <div class="progress">
+        <h3>Your Stamp Card</h3><p>Buy 10 beverages and your 11th is free.</p>
+        <div class="cups" id="cups"></div>
+        <div class="actions-row"><button class="btn navy" id="addPurchase">Log a Beverage Purchase</button><button class="btn" id="redeemBtn">Redeem Free Beverage</button></div>
+      </div>
+    </div>
+    <div id="securityView" class="security-box" style="display:none">
+      <h3 style="margin-bottom:14px">Change Password</h3>
+      <div id="passMsg" class="message"></div>
+      <form id="passForm">
+        <div class="form-group"><label>Current Password</label><input type="password" name="current" required></div>
+        <div class="form-group"><label>New Password</label><input type="password" name="newPass" required></div>
+        <div class="form-group"><label>Confirm New Password</label><input type="password" name="confirm" required></div>
+        <button class="btn navy block" type="submit">Update Password</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-vouchers"><div id="voucherList"></div></div>
+
+  <div class="panel history" id="panel-history">
+    <h3>Transaction History</h3><p>A list of all your loyalty transactions</p>
+    <table><thead><tr><th>Purchase Date</th><th>Transaction</th><th>Points accrued</th><th>Rewards accrued</th><th>Store name</th></tr></thead><tbody id="historyBody"></tbody></table>
+    <div class="pager"><span id="pageInfo">Page 1 of 1</span><button id="prevPage" aria-label="Previous">&#8249;</button><button id="nextPage" aria-label="Next">&#8250;</button></div>
+  </div>
+
+  <div class="panel" id="panel-profile">
+    <form id="profileForm" class="profile" novalidate>
+      <div id="profileMsg" class="message"></div>
+      <div class="form-group"><label>First Name</label><input name="firstName" placeholder="First Name"></div>
+      <div class="form-group"><label>Last Name</label><input name="lastName" placeholder="Last Name"></div>
+      <div class="form-group"><label>Date of Birth</label><input name="dob" type="date"></div>
+      <div class="form-group"><label>Email <span style="font-weight:400">(Unverified)</span> <span class="warn">&#9888;</span></label><input name="email" type="email" placeholder="Email"></div>
+      <div class="pref">
+        <h4>Preferred communication methods</h4>
+        <p>Selecting at least one option allows us to send important updates regarding your account such as password changes, vouchers etc.</p>
+        <label class="toggle-row"><span>Receive Email Notifications<small>Receive email notifications</small></span><input type="checkbox" name="emailNotif"></label>
+        <label class="toggle-row"><span>Receive Sms Notifications<small>Receive sms notifications</small></span><input type="checkbox" name="smsNotif"></label>
+      </div>
+      <button class="btn navy block" type="submit" style="margin-top:20px">Save Profile</button>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div><h3>Quick Links</h3><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+      <li><a href="catalogue.html">Catalogue</a></li><li><a href="loyalty.html">Loyalty</a></li>
+      <li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h3>Contact Us</h3>
+      <p>2144, 5 Western Service Rd, Wendywood, Sandton, 2148</p>
+      <p><a href="tel:0111234567">011 123 4567</a></p>
+      <p><a href="mailto:info@seattlecoffeecompany.co.za">info@seattlecoffeecompany.co.za</a></p></div>
+    <div><h3>Follow Us</h3>
+      <p><a href="https://www.facebook.com/SeattleCoffeeCo" target="_blank">Facebook</a> | <a href="https://www.instagram.com/seattlecoffeeco" target="_blank">Instagram</a> | <a href="https://twitter.com/seattlecoffeeco" target="_blank">Twitter</a></p></div>
+    <div><h3>Newsletter</h3>
+      <form class="newsletter"><input type="email" placeholder="Enter your email" required><button type="submit">Subscribe</button></form></div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Seattle Coffee Company | All Rights Reserved</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
