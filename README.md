@@ -195,3 +195,4 @@ The image folder structure was updated with new and renamed assets (such as coff
 Part 3 Change: A dedicated style.css file is now properly integrated to resolve missing stylesheet errors and apply global styling.
 Updates to style.css introduce layout rules, color schemes, and text formatting to enhance visual appeal.
 Implementation of pseudo-classes (such as hover or focus states) in CSS alongside script.js to improve user interaction.
+Refined breakpoints and layout adjustments to ensure elements, navigation, and images adapt better across different screen sizes.
