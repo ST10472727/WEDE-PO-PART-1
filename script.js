@@ -1,23 +1,23 @@
-// Seattle Coffee Company – shared JavaScript
+
 document.addEventListener("DOMContentLoaded", function () {
   // Mobile menu
   var toggle = document.querySelector(".menu-toggle");
   var nav = document.querySelector(".nav");
   if (toggle && nav) toggle.addEventListener("click", function () { nav.classList.toggle("open"); });
 
-  // Highlight current page in nav
+  
   var page = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav a").forEach(function (a) {
     if (a.getAttribute("href") === page) a.classList.add("active");
   });
 
-  // Fade-in on scroll
+ 
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add("visible"); });
   }, { threshold: 0.15 });
   document.querySelectorAll(".fade-in").forEach(function (el) { observer.observe(el); });
 
-  // Footer newsletter
+
   document.querySelectorAll(".newsletter").forEach(function (f) {
     f.addEventListener("submit", function (e) { e.preventDefault(); alert("Thanks for subscribing!"); f.reset(); });
   });
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initLoyalty();
 });
 
-/* ---------- Catalogue filter ---------- */
+
 function initCatalogue() {
   var buttons = document.querySelectorAll(".filter-btn");
   if (!buttons.length) return;
@@ -44,7 +44,7 @@ function initCatalogue() {
   });
 }
 
-/* ---------- Gallery lightbox ---------- */
+
 function initGallery() {
   var box = document.getElementById("lightbox");
   if (!box) return;
@@ -56,7 +56,7 @@ function initGallery() {
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") box.classList.remove("open"); });
 }
 
-/* ---------- Contact form validation ---------- */
+
 function initContact() {
   var form = document.getElementById("contactForm");
   if (!form) return;
@@ -88,7 +88,7 @@ function initLoyalty() {
   var dash = document.getElementById("dashboard");
   var mode = "login";
 
-  // Login / Sign up tabs
+ 
   document.querySelectorAll(".tabs-auth button").forEach(function (b) {
     b.addEventListener("click", function () {
       mode = b.dataset.mode;
@@ -130,7 +130,7 @@ function initLoyalty() {
     showDashboard();
   });
 
-  // Top loyalty nav
+  
   document.querySelectorAll(".loyalty-nav button[data-panel]").forEach(function (b) {
     b.addEventListener("click", function () { openPanel(b.dataset.panel); });
   });
@@ -140,7 +140,7 @@ function initLoyalty() {
     document.querySelector(".site-header").style.display = "";
   });
 
-  // Rewards / Security sub tabs
+
   document.querySelectorAll(".subtabs button").forEach(function (b) {
     b.addEventListener("click", function () {
       document.querySelectorAll(".subtabs button").forEach(function (x) { x.classList.toggle("active", x === b); });
@@ -164,7 +164,7 @@ function initLoyalty() {
   });
   document.getElementById("redeemBtn").addEventListener("click", function () { redeem(0); });
 
-  // Password change
+ 
   document.getElementById("passForm").addEventListener("submit", function (e) {
     e.preventDefault();
     var f = e.target, u = currentUser(), m = document.getElementById("passMsg");
@@ -175,7 +175,7 @@ function initLoyalty() {
     m.className = "message success"; m.textContent = "Password updated successfully.";
   });
 
-  // Profile save
+  
   document.getElementById("profileForm").addEventListener("submit", function (e) {
     e.preventDefault();
     var f = e.target, u = currentUser(), m = document.getElementById("profileMsg");
@@ -187,7 +187,7 @@ function initLoyalty() {
     m.className = "message success"; m.textContent = "Profile saved.";
   });
 
-  // History pager
+ 
   document.getElementById("prevPage").addEventListener("click", function () { page--; renderHistory(); });
   document.getElementById("nextPage").addEventListener("click", function () { page++; renderHistory(); });
 
@@ -216,7 +216,7 @@ function renderAll() {
   document.getElementById("statAvailable").textContent = u.available;
   document.getElementById("welcome").textContent = "Welcome back, " + u.firstName + "!";
 
-  // Stamp card
+  
   var cups = document.getElementById("cups"); cups.innerHTML = "";
   for (var i = 1; i <= 11; i++) {
     var c = document.createElement("div");
@@ -269,7 +269,7 @@ function renderHistory() {
   document.getElementById("nextPage").disabled = page === pages;
 }
 
-/* ---------- Shopping Cart (saved in the browser, works on every page) ---------- */
+
 (function () {
   var KEY = "seattleCart";
   function load() { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; } }
@@ -285,7 +285,7 @@ function renderHistory() {
     btn.innerHTML = "&#128722; Cart<span class='cart-count'>0</span>";
     if (wrap) wrap.appendChild(btn);
 
-    // Drawer
+    
     document.body.insertAdjacentHTML("beforeend",
       "<div class='cart-overlay'></div>" +
       "<aside class='cart-drawer' aria-label='Shopping cart'>" +
@@ -306,7 +306,7 @@ function renderHistory() {
     document.querySelector(".cart-overlay").addEventListener("click", close);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
 
-    // Add to cart buttons on products
+    
     document.querySelectorAll(".add-to-cart").forEach(function (b) {
       b.addEventListener("click", function () {
         var card = b.closest(".product");
@@ -319,7 +319,7 @@ function renderHistory() {
       });
     });
 
-    // Quantity / remove
+   
     document.querySelector(".cart-items").addEventListener("click", function (e) {
       var i = e.target.dataset.i; if (i === undefined) return;
       if (e.target.dataset.act === "plus") cart[i].qty++;
