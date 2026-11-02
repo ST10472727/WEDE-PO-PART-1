@@ -197,3 +197,4 @@ Updates to style.css introduce layout rules, color schemes, and text formatting 
 Implementation of pseudo-classes (such as hover or focus states) in CSS alongside script.js to improve user interaction.
 Refined breakpoints and layout adjustments to ensure elements, navigation, and images adapt better across different screen sizes.
 asset filenames like Catalogue.html were normalized to lowercase (catalogue.html), which prevents broken links caused by case-sensitive server environments.
+HTML files (about.html, catalogue.html, contact.html, gallery.html, loyalty.html) have cleaner directory paths pointing directly to the updated stylesheet and script files.
