@@ -194,3 +194,4 @@ A new script.js file has been added to Part 3 to introduce or expand interactive
 The image folder structure was updated with new and renamed assets (such as coffee-hero.jpg, menu.jpg, and numbered gallery images gallery1.jpg through gallery4.jpg) to improve visual content across the pages.
 Part 3 Change: A dedicated style.css file is now properly integrated to resolve missing stylesheet errors and apply global styling.
 Updates to style.css introduce layout rules, color schemes, and text formatting to enhance visual appeal.
+Implementation of pseudo-classes (such as hover or focus states) in CSS alongside script.js to improve user interaction.
