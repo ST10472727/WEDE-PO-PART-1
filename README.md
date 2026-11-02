@@ -205,3 +205,4 @@ Introduced a dedicated script.js file, adding programmable interactivity (such a
 Implemented a base CSS reset to remove default browser margins and paddings.
 Restructured the loyalty points section for clearer user engagement.
  Structured the product catalogue into a responsive grid container.
+ Added required input validation attributes (required, type="email") to contact forms.
