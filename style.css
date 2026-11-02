@@ -1,4 +1,4 @@
-/* Seattle Coffee Company – shared stylesheet */
+
 :root {
   --navy: #001f5f;
   --navy-deep: #1b1a55;
@@ -16,7 +16,7 @@ main { flex: 1; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 
-/* Header / nav */
+
 .site-header { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 50; }
 .site-header .wrap { max-width: 1150px; margin: auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; gap: 16px; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; font-size: 1rem; }
@@ -26,7 +26,7 @@ a { color: inherit; }
 .nav a:hover, .nav a.active { border-color: #fff; }
 .menu-toggle { display: none; background: none; border: 0; color: #fff; font-size: 1.7rem; cursor: pointer; }
 
-/* Common layout */
+
 .container { max-width: 1150px; margin: auto; padding: 50px 20px; }
 .section-title { font-size: 2rem; color: var(--navy); margin-bottom: 12px; }
 .lead { color: var(--muted); max-width: 680px; margin-bottom: 30px; }
@@ -36,7 +36,7 @@ a { color: inherit; }
 .btn.navy { background: var(--navy); }
 .btn.block { width: 100%; }
 
-/* Hero */
+
 .hero { position: relative; min-height: 70vh; display: grid; place-items: center; text-align: center; color: #fff; background: linear-gradient(rgba(0,20,60,.65), rgba(0,20,60,.65)), url("images/coffee-hero.jpg") center/cover; padding: 60px 20px; }
 .hero h1 { font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 14px; }
 .hero p { font-size: 1.15rem; margin-bottom: 26px; opacity: .9; }
@@ -45,7 +45,7 @@ a { color: inherit; }
 .page-banner h1 { font-size: 2.6rem; }
 .page-banner p { opacity: .85; }
 
-/* Cards / grids */
+
 .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .card { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; transition: transform .2s, box-shadow .2s; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,.1); }
@@ -57,12 +57,12 @@ a { color: inherit; }
 .split img { border-radius: var(--radius); }
 .band { background: var(--cream); }
 
-/* Catalogue filter */
+
 .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
 .filter-btn { border: 2px solid var(--navy); background: #fff; color: var(--navy); padding: 8px 18px; border-radius: 30px; font-weight: 700; cursor: pointer; }
 .filter-btn.active, .filter-btn:hover { background: var(--navy); color: #fff; }
 
-/* Gallery + lightbox */
+
 .gallery { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 .gallery img { width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius); cursor: zoom-in; transition: transform .3s; }
 .gallery img:hover { transform: scale(1.03); }
@@ -71,7 +71,7 @@ a { color: inherit; }
 .lightbox img { max-height: 85vh; border-radius: var(--radius); }
 .lightbox .close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 2.4rem; background: none; border: 0; cursor: pointer; }
 
-/* Forms */
+
 .form-group { margin-bottom: 16px; }
 label { display: block; font-weight: 600; margin-bottom: 6px; font-size: .95rem; }
 input, select, textarea { width: 100%; padding: 13px 16px; border: 1px solid #222; border-radius: 0; font-size: 1rem; font-family: inherit; }
@@ -82,7 +82,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--navy); outl
 .message.fail { display: block; background: #fdecea; color: #a52a1a; }
 .map { width: 100%; height: 360px; border: 0; border-radius: var(--radius); }
 
-/* ===== Loyalty: login screen ===== */
+
 .auth { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; max-width: 1050px; margin: auto; padding: 50px 20px; }
 .auth-img { border-radius: 28px; height: 520px; object-fit: cover; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,.2); }
 .auth h1 { color: var(--navy); text-transform: uppercase; letter-spacing: .06em; text-align: center; }
@@ -91,7 +91,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--navy); outl
 .tabs-auth button { flex: 1; background: none; border: 0; padding: 12px; font-weight: 700; cursor: pointer; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -2px; }
 .tabs-auth button.active { color: var(--navy); border-color: var(--navy); }
 
-/* ===== Loyalty: dashboard (after login) ===== */
+
 .loyalty-nav { background: var(--navy); }
 .loyalty-nav ul { list-style: none; display: flex; justify-content: center; gap: 70px; padding: 22px 10px; flex-wrap: wrap; }
 .loyalty-nav button { background: none; border: 0; color: #fff; font-weight: 700; font-size: 1rem; cursor: pointer; padding-bottom: 3px; border-bottom: 2px solid transparent; font-family: inherit; }
@@ -151,7 +151,7 @@ th { font-weight: 700; }
 .toggle-row small { display: block; font-size: .82rem; }
 .toggle-row input { width: 20px; height: 20px; accent-color: var(--tan); }
 
-/* Footer */
+
 .site-footer { background: #0b1533; color: #cfd6e6; margin-top: auto; }
 .footer-grid { max-width: 1150px; margin: auto; padding: 40px 20px; display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .site-footer h3 { color: #fff; margin-bottom: 10px; font-size: 1.05rem; }
@@ -163,11 +163,11 @@ th { font-weight: 700; }
 .site-footer button { background: var(--copper); color: #fff; border: 0; padding: 0 14px; cursor: pointer; font-weight: 700; }
 .footer-bottom { text-align: center; padding: 14px; border-top: 1px solid #22305a; font-size: .85rem; }
 
-/* Animations */
+
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .7s, transform .7s; }
 .fade-in.visible { opacity: 1; transform: none; }
 
-/* Responsive */
+
 @media (max-width: 860px) {
   .menu-toggle { display: block; }
   .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); flex-direction: column; padding: 16px 20px; gap: 14px; }
@@ -184,7 +184,7 @@ th { font-weight: 700; }
   table { font-size: .8rem; } th, td { padding: 8px; }
 }
 
-/* ---------- Cart ---------- */
+
 .cart-toggle { position: relative; background: transparent; border: 2px solid currentColor; color: inherit; border-radius: 6px; padding: 6px 12px; font-weight: 700; cursor: pointer; font-size: .95rem; margin-left: 12px; }
 .cart-count { display: inline-block; min-width: 22px; padding: 0 6px; margin-left: 6px; border-radius: 11px; background: var(--copper); color: #fff; font-size: .8rem; line-height: 22px; text-align: center; }
 .card .add-to-cart { margin-top: 10px; width: 100%; padding: 10px; }
