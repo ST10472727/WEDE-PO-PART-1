@@ -188,6 +188,7 @@ WorldPlaces (2025) Seattle Coffee Company – South Africa. Available at: WorldP
 
 
 Part 3 
+Part 3 consolidates styling into a single, structured style.css file.
 Consolidation of Directories: Removed redundant nested asset subfolders in favor of a clean, flat root structure 
  Added a new root-level script.js file to handle dynamic client-side interactivity.
 A new script.js file has been added to Part 3 to introduce or expand interactive functionality, addressing feedback regarding interactive elements and scripting.
