@@ -188,4 +188,4 @@ WorldPlaces (2025) Seattle Coffee Company – South Africa. Available at: WorldP
 
 
 Consolidation of Directories: Removed redundant nested asset subfolders in favor of a clean, flat root structure 
-
+ Added a new root-level script.js file to handle dynamic client-side interactivity.
