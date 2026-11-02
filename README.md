@@ -210,3 +210,4 @@ Grouped company history and mission statements into clean article blocks.
 Expanded button padding and clickable areas for touch devices.
 Implemented primary media queries targeting max-width screens (e.g., $768\text{px}$ and $480\text{px}$).
 Added default styling for buttons, including background fills and borders.
+Introduced consistent hex codes and color variables for background and text contrast.
