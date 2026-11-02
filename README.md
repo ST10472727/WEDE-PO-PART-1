@@ -201,3 +201,4 @@ asset filenames like Catalogue.html were normalized to lowercase (catalogue.html
 HTML files (about.html, catalogue.html, contact.html, gallery.html, loyalty.html) have cleaner directory paths pointing directly to the updated stylesheet and script files.
 Added core rule sets for color palettes, backgrounds, and typography that were completely missing in the previous submission.
 Introduced a dedicated script.js file, adding programmable interactivity (such as handling form inputs, dropdowns, or dynamic cart/loyalty features)
+ Moved style.css from a nested CSS/ folder to the main project directory for easier linking.
