@@ -212,3 +212,4 @@ Implemented primary media queries targeting max-width screens (e.g., $768\text{p
 Added default styling for buttons, including background fills and borders.
 Introduced consistent hex codes and color variables for background and text contrast.
 Created structured, bottom-pinned footer styling across all pages.
+Added baseline script functions to sort or filter catalogue items.
