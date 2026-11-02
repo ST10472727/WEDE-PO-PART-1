@@ -196,3 +196,4 @@ Part 3 Change: A dedicated style.css file is now properly integrated to resolve 
 Updates to style.css introduce layout rules, color schemes, and text formatting to enhance visual appeal.
 Implementation of pseudo-classes (such as hover or focus states) in CSS alongside script.js to improve user interaction.
 Refined breakpoints and layout adjustments to ensure elements, navigation, and images adapt better across different screen sizes.
+asset filenames like Catalogue.html were normalized to lowercase (catalogue.html), which prevents broken links caused by case-sensitive server environments.
